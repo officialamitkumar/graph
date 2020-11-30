@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="path/to/chartjs/dist/Chart.min.css">
+
+    <title>My chart.js charts</title>
+</head>
+<body>
+    <div class="container">
+        <canvas id="myChart"></canvas>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    
+    <script>
+        let myChart = document.getElementById('myChart').getContext('2d');
+
+        let massPopChart = new Chart(myChart,{
+
+            type:'bar',//bar,line kuch bhi kr sakta hai hm
+            data:{
+                labels:['Delhi','Mumbai','Muzaffarnagar','Ghaziabad','Nodia'],
+                datasets:[{
+                    label:'population',
+                    data:[
+                        250008,
+                        456123,
+                        741852,
+                        852369,
+                        321456
+                    ],
+                    backgroundColor:[
+                        'red',
+                        'Green',
+                        'yellow',
+                        'brown',
+                        'pink'
+                    ]
+                }]
+            },
+            option:{}
+        });
+    </script>
+</body>
+</html>
